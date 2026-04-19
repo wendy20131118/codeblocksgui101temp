@@ -699,7 +699,7 @@ int WatchArrayImpl(const char* name, T (&arr)[N]) {
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
     int demo[] = {10,20,30,40,50,60,70,80,90,100,110,120};
 
-    // �o�ӷ|�G�N�sĶ���ѡA�]���O pointer
+    // 這個會故意編譯失敗，因為是 pointer
     // int* p = demo;
     // WATCH_ARRAY(p);
 
