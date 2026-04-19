@@ -1,5 +1,5 @@
 #include <windows.h>
-
+#define main() WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR args, int ncmdshow)
 // 1. 視窗過程 (Window Procedure)：處理訊息的地方（按鈕點擊、關閉視窗等）
 LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
     switch (msg) {
@@ -25,7 +25,7 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
 }
 
 // 2. 主程式入口 (WinMain)
-int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR args, int ncmdshow) {
+int main() {
     WNDCLASSW wc = {0};
     wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);
